@@ -10,3 +10,9 @@ def home(request):
     }
 
     return render(request, 'home.html', context)
+
+
+
+
+def aboutus(request):
+    return render(request, 'aboutus.html')

@@ -138,6 +138,8 @@ def place_order(request, total=0, quantity=0,):
                 'grand_total': grand_total,
             }
             return render(request, 'payments.html', context)
+        else:
+            return render(request, 'checkout.html', {'form': form, 'cart_items': cart_items})
     else:
             # print("Form errors:", form.errors)
         return redirect('checkout')

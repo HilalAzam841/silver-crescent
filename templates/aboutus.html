@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Selver Crescent</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Dark brown gradient background, subtle */
+    background: linear-gradient(135deg, #3e2723, #5d4037);
+    color: #f5f5f5;
+  }
+
+  /* Central container */
+  .about-container {
+    text-align: center;
+    max-width: 800px;
+    padding: 50px 20px;
+    z-index: 2;
+  }
+
+  .about-container h1 {
+    font-size: 52px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #ffb74d; /* bright contrast on brown */
+    animation: fadeInDown 1s ease forwards;
+    opacity: 0;
+  }
+
+  .about-container p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 50px;
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+    animation-delay: 0.5s;
+  }
+
+  .btn-home {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(45deg, #ff8a65, #d84315);
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease, background-position 0.5s;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    background-size: 200% 200%;
+  }
+
+  .btn-home i {
+    margin-right: 12px; /* space between icon and text */
+  }
+
+  .btn-home:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    background-position: right center;
+  }
+
+  .about-icon {
+    font-size: 70px;
+    color: #ffb74d;
+    margin-bottom: 25px;
+    animation: bounce 2s infinite;
+  }
+
+  /* Floating side shapes */
+  .floating-shape {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255,183,77,0.1); /* subtle light orange for contrast */
+    filter: blur(25px);
+    animation: float 12s ease-in-out infinite;
+    z-index: 1;
+  }
+
+  .shape1 { width: 140px; height: 140px; top: 15%; left: 5%; animation-delay: 0s;}
+  .shape2 { width: 90px; height: 90px; top: 70%; left: 10%; animation-delay: 2s;}
+  .shape3 { width: 120px; height: 120px; top: 25%; right: 5%; animation-delay: 1s;}
+  .shape4 { width: 70px; height: 70px; top: 65%; right: 15%; animation-delay: 3s;}
+  .shape5 { width: 50px; height: 50px; top: 40%; left: 50%; animation-delay: 4s;}
+
+  @keyframes float {
+    0% { transform: translateY(0) translateX(0); }
+    50% { transform: translateY(-40px) translateX(20px);}
+    100% { transform: translateY(0) translateX(0);}
+  }
+
+  @keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-30px);}
+    100% { opacity: 1; transform: translateY(0);}
+  }
+
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px);}
+    100% { opacity: 1; transform: translateY(0);}
+  }
+
+  @keyframes bounce {
+    0%,100% { transform: translateY(0);}
+    50% { transform: translateY(-15px);}
+  }
+
+  @media (max-width: 768px) {
+    .about-container h1 { font-size: 38px;}
+    .about-container p { font-size: 16px;}
+    .btn-home { padding: 12px 28px; font-size: 16px;}
+    .floating-shape { display: none;} /* hide floating shapes on mobile */
+  }
+</style>
+</head>
+<body>
+
+<!-- Floating shapes -->
+<div class="floating-shape shape1"></div>
+<div class="floating-shape shape2"></div>
+<div class="floating-shape shape3"></div>
+<div class="floating-shape shape4"></div>
+<div class="floating-shape shape5"></div>
+
+<!-- Central content -->
+<div class="about-container">
+  <i class="fa fa-building about-icon"></i>
+  <h1>About Us</h1>
+  <p>
+    At Selver Crescent, we bring your vision to life with passion and expertise.  
+    Our innovative solutions empower businesses to thrive in a dynamic world.  
+    With integrity, creativity, and precision, we deliver impactful results that drive success.  
+    Excellence is our standard, and your growth is our mission — together, we create lasting value.
+  </p>
+  <a href="/" class="btn-home"><i class="fa fa-home"></i>Back to Shoping</a>
+</div>
+
+</body>
+</html>
