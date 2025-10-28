@@ -1,0 +1,53 @@
+# Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.swp
+
+# Django
+*.log
+*.pot
+*.pyc
+*.sqlite3
+db.sqlite3
+local_settings.py
+media/
+staticfiles/
+
+# Virtual Environments
+venv/
+env/
+ENV/
+
+# IDE settings
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Environment variables
+.env
+*.env
+
+# Byte-compiled / optimized
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Build
+build/
+dist/
+
+# Node (if using React or frontend inside project)
+node_modules/
+
+# Compiled translations
+*.mo
+
+# Backup files
+*.bak
+*.tmp
+*.tar
+*.zip
