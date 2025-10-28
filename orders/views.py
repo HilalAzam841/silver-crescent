@@ -12,7 +12,8 @@ from django.template.loader import render_to_string
 
 def payments(request):
     body = json.loads(request.body)
-    order = Order.objects.get(user=request.user, is_ordered = False, order_number = body['orderID'])
+    order = Order.objects.get(user=request.user, order_number=body['orderID'])
+
     print(body)
     payment = Payment(
         user = request.user,
@@ -97,8 +98,9 @@ def place_order(request, total=0, quantity=0,):
     for cart_item in cart_items:
         total    += (cart_item.product.price * cart_item.quantity)
         quantity += cart_item.quantity
-    tax         = (2 * total)/100
-    grand_total = total + tax
+    #  tax         = (2 * total)/100
+        tax         = 0
+    grand_total = total + 0
     
     if request.method == 'POST':
         form = OrderForm(request.POST)
