@@ -1,1 +1,1 @@
-web: gunicorn silver_crescent.wsgi:application
+web: gunicorn silver-crescent.wsgi:application
